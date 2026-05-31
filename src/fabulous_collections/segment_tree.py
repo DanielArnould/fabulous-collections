@@ -19,16 +19,13 @@ class SegmentTree[T]:
     >>> import operator
     >>> # Create a segment tree for answering sum queries
     >>> tree = SegmentTree([1, 2, 3, 4, 5], operator.add, int)
-
     >>> tree.query(0, 5)                # sum of all elements
     15
     >>> tree.query(1, 4)                # sum of elements at indices 1, 2, 3
     9
-
     >>> tree.update(2, 10)              # replace the '3' at index 2 with '10'
     >>> tree.query(1, 4)                # the same query now reflects the update
     16
-
     >>> tree.query(4, 2)                # invalid/empty ranges return the identity
     0
 
@@ -97,7 +94,7 @@ class SegmentTree[T]:
         )
 
     def update(self, index: int, new_val: T) -> None:
-        """Replace the element at `index` with `new_val`.
+        """Replace the element at ``index`` with ``new_val``.
 
         >>> import operator
         >>> tree = SegmentTree([1, 1, 1], operator.add, int)
