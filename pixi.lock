@@ -162,7 +162,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/win_inet_pton-1.1.0-pyh7428d3b_8.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
       - pypi: ./
-  test:
+  tests:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
     indexes:
@@ -460,7 +460,7 @@ packages:
 - pypi: ./
   name: fabulous-collections
   version: 0.1.0
-  sha256: 7f73ae58942ce62ebed81e5410c8fa8aefeea275cad61a01dd61b0e7c8faf0cf
+  sha256: 5f20737b91119de3749875216106762a5cb9b221c6ac6a2bc6639b7e515326b5
   requires_python: '>=3.14'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/h2-4.3.0-pyhcf101f3_0.conda
