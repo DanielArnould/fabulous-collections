@@ -22,8 +22,19 @@ fabulous_collections = { path = ".", editable = true }
 pytest = "*"
 hypothesis = "*"
 
+[tool.pixi.feature.docs.dependencies]
+sphinx = "*"
+shibuya = "*"
+
 [tool.pixi.feature.test.tasks]
 test = "pytest"
 
+[tool.pixi.feature.docs.tasks]
+docs-build = "sphinx-build --builder html docs docs/_build/html"
+
 [tool.pixi.environments]
 test = ["test"]
+docs = ["docs"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
